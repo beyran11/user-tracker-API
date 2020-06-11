@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      show-sql: true
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    username: postgres
+    password: password
+    url: jdbc:postgresql://localhost:8081/mydb
+    initialization-mode: always
+    initialize: true
+    schema: classpath:/schema.sql
+    continue-on-error: true
+
